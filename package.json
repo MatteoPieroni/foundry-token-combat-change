@@ -4,7 +4,8 @@
   "description": "A Foundry VTT module to change the token image when a token is added to combat",
   "main": "index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "dev": "tsc -w"
   },
   "author": "Matteo Pieroni",
   "license": "ISC",

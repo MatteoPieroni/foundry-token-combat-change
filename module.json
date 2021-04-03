@@ -1,0 +1,15 @@
+{
+	"name": "foundry-token-combat-change",
+	"title": "Token Combat Change",
+	"description": "Foundry VTT module to change the token image with a different one when in combat",
+	"version": "0.1.0",
+	"esmodules": [
+		"dist/index.js"
+	],
+	"author": "Matteo Pieroni",
+	"minimumCoreVersion": "0.7.9",
+	"compatibleCoreVersion": "0.7.9",
+	"url": "https://github.com/MatteoPieroni/foundry-token-combat-change",
+	"manifest": "https://raw.githubusercontent.com/MatteoPieroni/foundry-token-combat-change/main/module.json",
+	"download": ""
+}
