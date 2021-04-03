@@ -1,0 +1,15 @@
+{
+  "name": "token-combat-image",
+  "version": "0.1.0",
+  "description": "A Foundry VTT module to change the token image when a token is added to combat",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "Matteo Pieroni",
+  "license": "ISC",
+  "devDependencies": {
+    "@league-of-foundry-developers/foundry-vtt-types": "^0.7.9-5",
+    "typescript": "^4.2.3"
+  }
+}
