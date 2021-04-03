@@ -1,0 +1,1 @@
+token-combat-image
