@@ -1,25 +1,21 @@
-import { changeImage } from "./change-image";
+import { changeImage } from "./change-image.js";
 
-const changePic = async (e: Combat, isCombat?: boolean) => {
-	if (isCombat && (e.current.round !== 1 || e.current.turn !== 0)) {
+const changePic = async (token: Combat.Combatant, isCombat?: boolean) => {
+	if (!canvas.ready) {
 		return;
 	}
 
-	e.data.combatants.forEach(async user => {
-		if (!canvas.ready) {
-			return;
-		}
-		const tokens = canvas.tokens.placeables.filter(tok => tok.actor.id === user.actor.id);
+	const tokens = canvas.tokens.placeables.filter(tok => tok.id === token.tokenId);
 
-		if (tokens.length === 0) {
-			console.log('No token was found')
-			return;
-		}
+	if (tokens.length === 0) {
+		console.log('No token was found')
+		return;
+	}
 
-		tokens.forEach(tok => changeImage(tok, isCombat));
-	});
+	const allChanges = tokens.map(tok => changeImage(tok, isCombat));
+
+	await Promise.all(allChanges);
 }
 
-Hooks.on('updateCombat', (e: Combat) => changePic(e, true));
-
-Hooks.on('deleteCombat', (e: Combat) => changePic(e, false));
+Hooks.on('createCombatant', (_, token: Combat.Combatant) => changePic(token, true));
+Hooks.on('deleteCombatant', (_, token: Combat.Combatant) => changePic(token, false));

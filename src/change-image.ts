@@ -1,4 +1,4 @@
-import { imageExists } from "./utils/image-exists";
+import { imageExists } from "./utils/image-exists.js";
 
 export const changeImage = async (token: Token, isCombat?: boolean) => {
 	const currentImage = token.data.img;
