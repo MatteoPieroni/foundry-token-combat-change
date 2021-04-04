@@ -11,5 +11,5 @@
 	"compatibleCoreVersion": "0.7.9",
 	"url": "https://github.com/MatteoPieroni/foundry-token-combat-change",
 	"manifest": "https://raw.githubusercontent.com/MatteoPieroni/foundry-token-combat-change/main/module.json",
-	"download": ""
+	"download": "https://github.com/MatteoPieroni/foundry-token-combat-change/releases/download/0.1.0/module.zip"
 }
